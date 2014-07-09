@@ -1,14 +1,20 @@
 package gui;
 
+import javax.swing.JFrame;
+
 public class UserInterface {
 
 	public static void main(String[] args) {
 		
 		//Create a window
-		windowFrame Frame =  new windowFrame();
+		WindowTray frame =  new WindowTray();
 		
-		//Frame.panel.writeLog("algo");
-		//Frame.panel.writeLog("otra palabra");
+		//create panels
+		JpanelComponent panel =  new JpanelComponent();
+		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
+		frame.pack();
 
 	}
 

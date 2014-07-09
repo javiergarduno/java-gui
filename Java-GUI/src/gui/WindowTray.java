@@ -1,7 +1,6 @@
 package gui;
 
 import java.awt.AWTException;
-import java.awt.BorderLayout;
 import java.awt.Image;
 import java.awt.MenuItem;
 import java.awt.PopupMenu;
@@ -13,14 +12,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
 import javax.swing.UIManager;
 
-public class windowFrame extends JFrame{
+public class WindowTray extends JFrame{
 	TrayIcon trayIcon;
 	SystemTray tray;
 	
@@ -28,8 +23,8 @@ public class windowFrame extends JFrame{
 	JpanelComponent panel2;
 
 	
-	windowFrame(){
-		super("Windows Title");
+	WindowTray(){
+		//super("Windows Title");
 
 		System.out.println("creating instance");
 		
@@ -109,16 +104,9 @@ public class windowFrame extends JFrame{
 		});
 				
 		setIconImage(Toolkit.getDefaultToolkit().getImage("image.png"));
-
-		
-		
-		
-		panel =  new JpanelComponent();
-        add(panel);
 		
 		//Set window characteristics.
 		setVisible(true);
-		//Set default size
 		//setSize(800, 800);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		pack();
